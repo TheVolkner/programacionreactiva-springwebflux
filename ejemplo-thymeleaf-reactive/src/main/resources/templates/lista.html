@@ -1,0 +1,31 @@
+
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Listado Reactivo</title>
+</head>
+<body>
+
+<h1>Thymeleaf + Spring WebFlux</h1>
+
+<table style="border:1px solid black">
+  <tr>
+    <th>
+      #
+    </th>
+    <th>
+      Importe
+    </th>
+    <th>
+      Concepto
+    </th>
+  </tr>
+  <tr th:each="producto:${listaProductos}">
+    <td th:text="${producto.numero}"> </td>
+    <td th:text="${producto.importe}"> </td>
+    <td th:text="${producto.concepto}"> </td>
+  </tr>
+</table>
+
+</body>
+</html>
